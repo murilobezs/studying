@@ -402,6 +402,9 @@ section{
 
     .col-sm{
         transition: all .6s;
+        position: relative;
+        display: inline-block;
+        width: 100%;
     }
 
     .col-sm img{
@@ -423,27 +426,37 @@ section{
     .col-img:hover img{
         transform: scale(1.05);
     }
-
-    /* .col-icon{
-        position: absolute;
-        bottom: 20px;
-        right: 30px;
-    }
-
-
-    .col-icon i{
-        margin-bottom: 20px;
-        width: 40px;
-        height: 40px;
-        background: var(--text-color)
-    } */
-
-    .col-icon{
-        position: flex;
-        padding-bottom: 10px;
-    }
-    
-    .col-icon a{
-        text-decoration: none;
-        display: block;
-    }
+  
+  /* A imagem ocupa todo o espaço disponível */
+  .col-img img {
+    width: 100%;
+    display: block;
+  }
+  
+  /* Os ícones devem ser absolutamente posicionados sobre a imagem */
+  .col-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80px; /* Ajuste o tamanho se necessário */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Mostrar ícones ao passar o mouse sobre o contêiner */
+  .col-sm:hover .col-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  
+  /* Ícones individuais */
+  .col-icon a {
+    color: var(--bg-color);
+    font-size: 24px; /* Ajuste o tamanho dos ícones */
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.1);
+  }
+  
