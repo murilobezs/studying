@@ -196,7 +196,7 @@ section{
     }
 
     .row-img{
-        overflow: hidden;
+        /* overflow: hidden; */
         border-radius: 28px;
         margin-bottom: 15px;
     }
@@ -209,13 +209,14 @@ section{
     }
 
     .row-img:hover img{
-        transform: scale(0.9);
+        transform: scale(1.05) translateY(-5px);
     }
 
     .row h3{
         font-size: 17px;
         font-weight: 700;
         margin-bottom: 5px;
+        margin-top: 4px;
     }
 
     .stars a{
@@ -322,8 +323,5 @@ section{
     }
 
     .selling-content{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50px, auto));
-        align-items: center;
-        margin-top: 4rem;
+      display: grid;
     }
