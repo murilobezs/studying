@@ -101,7 +101,7 @@ header{
 
 
 .hamburger {
-    width: 20px;
+    width: 10px;
     transform: 0.2s;
     position: relative;
   }
@@ -114,7 +114,7 @@ header{
   }
   .line {
     transition: 0.5s;
-    stroke-width: 6px;
+    stroke-width: 4px;
     stroke: black;
   }
   .lineTop {
@@ -400,14 +400,14 @@ section{
       display: grid;
     }
 
-    .col-sm{
+    .col-md{
         transition: all .6s;
         position: relative;
         display: inline-block;
         width: 100%;
     }
 
-    .col-sm img{
+    .col-md img{
         width: 100%;
     }
 
@@ -447,7 +447,7 @@ section{
   }
   
   /* Mostrar ícones ao passar o mouse sobre o contêiner */
-  .col-sm:hover .col-icon {
+  .col-md:hover .col-icon {
     opacity: 1;
     transform: translate(-50%, -50%) translateY(0);
   }
@@ -600,18 +600,99 @@ section{
     }
   }
 
-  @media(max-width: 11170px){
+  @media(max-width: 1170px){
     header{
-        padding: 10px x 7%;
+        padding: 10px x 4%;
 
     }
     section{
-        padding: 70px 7% 80px;
+        padding: 60px 4% 70px;
     }
     .brands{
-        padding: 20px 7%;
+        padding: 300px 4%;
     }
     .feature{
-        padding: 10px 7% 10px;
+        padding: 10px 4% 10px;
     }
+    .feature-content{
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    }
+    .newsletter-content{
+      grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    }
+  }
+
+  @media(max-width: 1197px){
+    #menu-icon{
+      display: block;
+    }
+    .navlist{
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      padding: 40px 60px;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-color);
+      transition: all .50s ease;
+    }
+    .navlist a{
+      display: block;
+      color: #979797;
+      padding: 0;
+      margin: 0px 0px 30px 0px;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    .navlist.open{
+      left: 0;
+    }
+
+    :root{
+      --h1-font: 4.5rem;
+      --h2-font: 2.6rem;
+    }
+
+    .logo{
+      font-size: 25px;
+    }
+    .brands{
+      padding: 40px 4%;
+    }
+    .main-brands{
+      gap: 25px;
+    }
+    .brands-c img{
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+    }
+    .newsletter-content form input:first-child{
+      padding: 8px;
+    }
+    .newsletter-content form input:last-child{
+      font-size: 12px;
+    }
+    .col-img{
+      padding-bottom: 15px;
+    }
+  }
+
+  @media(max-width: 530px){
+    :root{
+      --h1-font: 3.5rem;
+      --h2-font: 2.2rem;
+    }
+    .btn-shop{
+      padding: 12px 20px;  
+    }
+    .nav-right a{
+      margin-right: 7px;
+    }
+
+    
   }
